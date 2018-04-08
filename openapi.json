@@ -1,0 +1,87 @@
+{
+ "swagger": "2.0",
+ "info": {
+  "version": "1.0.0",
+  "title": "hidden-gems-4e29c.appspot.com"
+ },
+ "host": "hidden-gems-4e29c.appspot.com",
+ "basePath": "/_ah/api",
+ "schemes": [
+  "https"
+ ],
+ "consumes": [
+  "application/json"
+ ],
+ "produces": [
+  "application/json"
+ ],
+ "paths": {
+  "/hiddengemPlaces/v1/places": {
+   "post": {
+    "operationId": "HiddengemPlacesPlaces",
+    "parameters": [
+     {
+      "in": "body",
+      "name": "body",
+      "required": false,
+      "schema": {
+       "$ref": "#/definitions/UserPlaceRequest"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "A successful response",
+      "schema": {
+       "$ref": "#/definitions/PlaceResponse"
+      }
+     }
+    }
+   }
+  }
+ },
+ "definitions": {
+  "UserPlaceRequest": {
+   "properties": {
+    "activityCategory": {
+     "type": "string"
+    },
+    "distanceFilter": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "priceFilter": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "ratingsFilter": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "userPlaceId": {
+     "type": "string"
+    },
+    "userUid": {
+     "type": "string"
+    }
+   }
+  },
+  "PlaceResponse": {
+   "properties": {
+    "placeList": {
+     "type": "array",
+     "items": {
+      "$ref": "#/definitions/Place"
+     }
+    }
+   }
+  },
+  "Place": {
+   "properties": {
+    "palceId": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

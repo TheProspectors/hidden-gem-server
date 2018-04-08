@@ -17,6 +17,7 @@
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
+.gradle/
 
 # CMake
 cmake-build-debug/
@@ -30,6 +31,8 @@ cmake-build-release/
 
 # IntelliJ
 out/
+.idea/
+*.iml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -48,3 +51,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+# Custom
+target/
+build/
